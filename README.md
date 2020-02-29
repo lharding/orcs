@@ -2,6 +2,17 @@
 
 ORCS is a tool for managing "dotfiles" across multiple machines, via the version control tool (or not) of your choice. It's "overriding" because it allows you to create cascading "overrides" where a config-set builds on any number of other config-sets in a directed acyclic graph.
 
+## Dependencies
+
+Python 2 (yes, I wrote this some time ago). 
+
+## Installation
+
+The `orcs` script is self-contained and can be downloaded on its own via curl to help you bootstrap a new machine:
+```
+curl https://raw.githubusercontent.com/lharding/orcs/master/orcs > orcs
+```
+
 ## Usage
 
 ### General Principle
