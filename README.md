@@ -33,6 +33,8 @@ Compile the tree of orcsfiles beginning at `$HOME/.orcsfile` into a list of syml
 
 Move `FILE` into a directory whose path relative to the top-level `orcsfile` is the same as `FILE`'s path relative to `$HOME` and add the necessary directives to the top-level orcsfile to create and maintain links to `FILE`'s previous location.
 
+If `FILE` is a directory, the directory's contents will be tracked (see `link` directive, below).
+
 This command only moves the file and updates the top-level orcsfile, so be sure to run `orcs` afterwards.
 
 ### orcsfile format
