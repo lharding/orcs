@@ -47,7 +47,7 @@ A list of directives, one per line, from the following set:
 
 `link` is the backbone of ORCS. It's actually possible to use ORCS only understanding the function of this directive, and ignoring all other functionality. `link` directs ORCS to creat a symlink pointing to `REALFILE` *relative to the directory containing the orcsfile in which the `link` directive is found* (unless `REALFILE` is an absolute path, in which case the absolute path is used), at the absolute path `TARGET_PATH`.
 
-If `REALFILE` is a directory, `link` processes all children of that directory as if they were the target of their own `link` directive` (but see `unmanage`, below).
+If `REALFILE` is a directory, `link` processes all children of that directory as if they were the target of their own `link` directive (but see `unmanage`, below).
 
 Example:
 
