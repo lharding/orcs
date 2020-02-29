@@ -23,6 +23,18 @@ Orcsfiles can also `include` other orcsfiles, in a manner similar to the `sh` `s
 
 Finallly, ORCS operates on the orcsfile found at `$HOME/.orcsfile` when run. This can itself be a symlink to a specified entry-point, allowing a single directory tree to manage configuration for multiple machines or users by simply pointing their .orcsfiles to different real orcsfiles within the directory.
 
+### Commands
+
+#### `orcs`
+
+Compile the tree of orcsfiles beginning at `$HOME/.orcsfile` into a list of symlink names and targets, and update `$HOME` to match, moving any found configuration files into the orcs directory as it goes.
+
+#### `orcs track <FILE>`
+
+Move `FILE` into a directory whose path relative to the top-level `orcsfile` is the same as `FILE`'s path relative to `$HOME` and add the necessary directives to the top-level orcsfile to create and maintain links to `FILE`'s previous location.
+
+This command only moves the file and updates the top-level orcsfile, so be sure to run `orcs` afterwards.
+
 ### orcsfile format
 
 A list of directives, one per line, from the following set:
